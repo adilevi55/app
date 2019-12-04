@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+}
+.life-cycle-hooks-div{
+width: 100%;
+display: flex;
+justify-content: start;
+}
+.life-cycle-hooks-div div h1{
+    display: block;
+}

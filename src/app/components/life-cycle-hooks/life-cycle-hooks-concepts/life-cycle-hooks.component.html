@@ -1,0 +1,121 @@
+<mat-accordion>
+        <!-- ngOnInit  -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+              ngOnInit
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+         זהו שלב האיתחול של הרכיב או ה
+         directive
+         לאחר ה
+          inputs
+          שהוגדרו לו
+        </p>
+        
+      </mat-expansion-panel>
+    
+       <!-- ngOnChanges  -->
+       <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                ngOnChanges
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+              זהו השלב שבו הרכיב מקבל את ה
+          <span>input</span>  
+              ים שהוגדרו לו או כאשר הם משתנים 
+          </p>
+          
+        </mat-expansion-panel>
+    
+           <!-- ngDoCheck   -->
+       <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                ngDoCheck 
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+              זהו שלב בו ניתן לבדוק שינויים שהתשתית לא הבחינה בהם בעצמה. הוא נקרא בכל פעם שהתשתית מחפשת שינויים ברכיב ומסייע לה להרחיב את הבדיקה. 
+          </p>
+          
+        </mat-expansion-panel>
+    
+        
+           <!-- ngOnDestroy    -->
+       <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                ngOnDestroy  
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+               זהו שלב הריסת אובייקט הרכיב או ה
+            <span>directive</span>
+            בשלב זה ננקה רישום ל
+            <span>event</span>
+            ים או רישומים ל 
+            <span>observables</span>
+            על מנת למנוע דליפת זיכרון
+          </p>
+          
+        </mat-expansion-panel>
+    
+             <!-- ngAfterContentInit     -->
+       <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                ngAfterContentInit   
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+              זהו השלב שבו התשתית מכניסה את רכיבי הבנים של הרכיב לתצוגה שלו.
+          </p>
+          
+        </mat-expansion-panel>
+    
+             <!-- ngAfterContentChecked     -->
+       <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                ngAfterContentChecked   
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+              זהו השלב שבו התשתית בודקת את  ה
+            <span>bindings </span>
+            של רכיבי הבנים של הרכיב
+          </p>
+          
+        </mat-expansion-panel>
+    
+             <!-- ngAfterViewInit     -->
+       <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                ngAfterViewInit   
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+              זהו השלב שבו התשתית יוצרת את התצוגה של הרכיב
+          </p>
+          
+        </mat-expansion-panel>
+    
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+              ngAfterViewChecked
+              </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+            - זהו השלב שבו התשתית בודקת את ה
+          <span>bindings</span>
+          של התצוגה של הרכיב
+          </p>
+      </mat-expansion-panel>
+    </mat-accordion>

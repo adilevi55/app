@@ -1,0 +1,31 @@
+<h1>type test works!</h1>
+
+
+        <ng-container *ngIf="words.name[0] != undefined ">
+            <div 
+            fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start"
+            
+            
+            >
+            <div  *ngFor="let w of wordsList; let i = index"
+            fxFlex="0 1 calc(33.3% - 32px)"
+            >
+                    <p>{{w}}</p>
+                    <mat-form-field class="example-full-width">
+                            <p class="currectWord" *ngIf="words.name[i] === w">ok</p>
+                            <input matInput [(ngModel)]="words.name[i]" 
+                            required #wordsInfo="ngModel"
+                            value="">
+                          </mat-form-field>
+                          <mat-error *ngIf="wordsInfo.errors?.required && wordsInfo.touched">
+                                Missing Word</mat-error>
+                          <mat-error *ngIf="words.name[i] !== w && wordsInfo.touched">
+                                !!!!!!!</mat-error>
+      
+        </div>
+
+            </div>
+
+</ng-container>
+
+

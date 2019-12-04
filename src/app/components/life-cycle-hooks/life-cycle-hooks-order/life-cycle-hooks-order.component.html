@@ -1,0 +1,13 @@
+<h1>Lifecycle Hooks Order</h1>
+
+      
+      <button mat-button (click)="openSnackBar()">Show Hints</button>
+
+
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let lifecycleHook of lifecycleHooksChange" cdkDrag>
+                  <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                  {{lifecycleHook}}
+                </div>
+              </div>
+ 
